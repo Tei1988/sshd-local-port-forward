@@ -1,0 +1,26 @@
+Port 9022
+AddressFamily any
+ListenAddress 0.0.0.0
+ListenAddress ::
+
+Protocol 2
+
+HostKey /var/ssh/host_keys/rsa
+HostKey /var/ssh/host_keys/ecdsa
+HostKey /var/ssh/host_keys/ed25519
+
+#LogLevel debug
+
+PermitRootLogin no
+
+PubkeyAuthentication yes
+AuthorizedKeysFile	.ssh/authorized_keys
+
+PasswordAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+
+AllowAgentForwarding yes
+GatewayPorts yes
+AllowTcpForwarding yes
+ClientAliveInterval 60
