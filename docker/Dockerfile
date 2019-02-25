@@ -1,7 +1,7 @@
 FROM alpine:3.9
 EXPOSE 9022
 
-RUN apk add --update --no-cache openssh-server && \
+RUN apk add --update --no-cache openssh-server ca-certificates && \
     rm -rf /var/cache/apk/* && \
     addgroup proxy && \
     adduser -D -G proxy proxy && \
