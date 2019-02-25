@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 EXPOSE 9022
 
 RUN apk add --update --no-cache openssh-server && \
